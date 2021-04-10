@@ -1,0 +1,15 @@
+version: '2.2'
+
+services:
+  app:
+    image: ambientum/php:latest-nginx #latest version: php 8.0.1
+    container_name: rafael-gomes-app
+    volumes:
+      - .:/var/www/app
+      - ./.platform/my_app.ini:/etc/php7/conf.d/my_app.ini
+    ports:
+      - "80:8080"
+    environment:
+      - XDEBUG_ENABLED=true
+      - PHP_IDE_CONFIG=serverName=ambientum
+      - DOCKER_FOR_WINDOWS=${DOCKER_FOR_WINDOWS}

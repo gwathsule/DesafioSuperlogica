@@ -23,6 +23,14 @@ $ chmod u+x bin
 $ ./bin up -d
 ```
 
+> 3. Baixe as bibliotecas necessárias
+
+```bash
+$ ./bin composer update
+```
+
+Realizado esses passos sem erros, o projeto deverá estar rodando no seu [localhost](http://localhost/).
+
 Caso queira rodar os testes, execute o comando
 ```bash
 $ ./bin phpunit
